@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<phpunit bootstrap = "vendor/autoload.php"
+    backupGlobals               = "false"
+    backupStaticAttributes      = "false"
+    colors                      = "true"
+    convertErrorsToExceptions   = "true"
+    convertNoticesToExceptions  = "true"
+    convertWarningsToExceptions = "true"
+    processIsolation            = "false"
+    stopOnFailure               = "false">
+
+    <testsuites>
+        <testsuite name="ChatAPI Suite">
+            <file>/app/test/LayerService/Objects/IdTest.php</file>
+            <file>/app/test/LayerService/Objects/PhavaTextTest.php</file>
+            <file>/app/test/LayerService/Objects/PhavaDatetimeTest.php</file>
+            <file>/app/test/LayerService/Objects/UsernameTest.php</file>
+            <file>/app/test/LayerService/Objects/NameTest.php</file>
+            <file>/app/test/LayerService/Objects/SurnameTest.php</file>
+            <file>/app/test/LayerService/Objects/FullnameTest.php</file>
+            <file>/app/test/LayerService/ServiceModels/UserTest.php</file>
+            <file>/app/test/LayerService/ServiceModels/MessageTest.php</file>
+            <file>/app/test/LayerService/Factories/ServiceModelFactories/ServiceModelFactoryUserTest.php</file>
+            <file>/app/test/LayerService/Factories/ServiceModelFactories/ServiceModelFactoryMessageTest.php</file>
+            <file>/app/test/LayerNetwork/Factories/FactoryJsonTest.php</file>
+            <file>/app/test/LayerNetwork/Controllers/ControllerMessageTest.php</file>
+            <file>/app/test/IntegrationTest.php</file>
+        </testsuite>
+    </testsuites>
+
+
+
+    <coverage>
+        <include>
+            <directory suffix=".php">./app</directory>
+        </include>
+    </coverage>
+
+    <php>
+        <env name="APP_ENV" value="testing"/>
+        <var name="TEST_DB" value="yes" />
+    </php>
+
+</phpunit>

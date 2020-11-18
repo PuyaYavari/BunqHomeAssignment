@@ -1,0 +1,14 @@
+{
+    "require": {
+        "slim/slim": "3.*",
+        "zeuxisoo/slim-whoops": "0.7.*",
+        "monolog/monolog": "^2.1",
+        "phpunit/phpunit": "^9",
+        "fzaninotto/faker": "1.9.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "App/"
+        }
+    }
+}
